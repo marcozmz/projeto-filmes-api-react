@@ -14,7 +14,7 @@ Este projeto permite cadastrar, visualizar, editar e excluir filmes de um catál
 | `id` | Auto | Gerado automaticamente pelo MockAPI |
 | `nome` | String | Nome do filme |
 | `genero` | String | Gênero do filme |
-| `ano` | String | Ano de lançamento |
+| `ano` | Number | Ano de lançamento |
 
 ---
 

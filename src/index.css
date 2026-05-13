@@ -1,0 +1,270 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f1a;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* ── NAVBAR ── */
+.navbar {
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid #e94560;
+  box-shadow: 0 2px 20px rgba(233, 69, 96, 0.2);
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+  color: #e94560;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 12px;
+}
+
+.navbar a {
+  color: #a0a0c0;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #fff;
+  background-color: #e94560;
+  border-color: #e94560;
+}
+
+/* ── CONTAINER ── */
+.container {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* ── PAGE TITLE ── */
+.page-title {
+  font-size: 1.8rem;
+  color: #e94560;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+/* ── CARDS ── */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.movie-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 10px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.movie-card:hover {
+  border-color: #e94560;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(233, 69, 96, 0.25);
+}
+
+.movie-card .movie-id {
+  font-size: 0.75rem;
+  color: #666;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.movie-card .movie-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ── DETAIL CARD ── */
+.detail-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #e94560;
+  min-width: 80px;
+  padding-top: 2px;
+}
+
+.detail-value {
+  font-size: 1.05rem;
+  color: #e0e0e0;
+}
+
+/* ── FORM ── */
+.form-card {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 520px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a0a0c0;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 14px;
+  background: #0f0f1a;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #e94560;
+}
+
+/* ── BOTÕES ── */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 11px 26px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background: #e94560;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #c73652;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #a0a0c0;
+  border: 1px solid #2a2a4a;
+}
+
+.btn-secondary:hover {
+  border-color: #a0a0c0;
+  color: #fff;
+}
+
+.btn-danger {
+  background: #8b0000;
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #a00000;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── SEARCH BOX ── */
+.search-box {
+  background: #1a1a2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 28px;
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+/* ── MENSAGENS ── */
+.msg-loading,
+.msg-empty {
+  color: #666;
+  font-size: 1rem;
+  padding: 20px 0;
+}
+
+.msg-error {
+  background: rgba(233, 69, 96, 0.1);
+  border: 1px solid #e94560;
+  color: #e94560;
+  padding: 16px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.msg-not-found {
+  background: #1a1a2e;
+  border: 1px solid #e94560;
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.msg-not-found p {
+  color: #e94560;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
